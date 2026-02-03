@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDRbytes | Coding & Robotics Learning Hub</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)),
+                  url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #020617;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #38bdf8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    section h2 {
+      color: #38bdf8;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.3);
+    }
+
+    /* POP-UP DETAILS */
+    .card-details {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin-top: 15px;
+      transition: max-height 0.6s ease, opacity 0.4s ease;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #cbd5f5;
+    }
+
+    .card.active .card-details {
+      max-height: 900px;
+      opacity: 1;
+    }
+
+    .card-details a {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .code-runner textarea {
+      width: 100%;
+      height: 180px;
+      background: #020617;
+      color: #e5e7eb;
+      font-family: 'Roboto Mono', monospace;
+      border-radius: 10px;
+      padding: 15px;
+      border: none;
+    }
+
+    .code-runner button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #38bdf8;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #020617;
+      padding: 30px;
+      text-align: center;
+    }
+
+    footer span {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>HDRbytes</h1>
+    <p>An academic-friendly learning platform for coding, robotics, and future innovators — built by students of Alangilan Senior High School.</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#intro">Introduction</a>
+  <a href="#languages">Languages</a>
+  <a href="#basics">Coding Basics</a>
+  <a href="#runner">Code Runner</a>
+  <a href="#about">About Us</a>
+</nav>
+
+<section id="intro">
+  <h2>Introduction to Coding & Programming</h2>
+  <p>Coding is the foundation of modern technology. It allows humans to communicate with machines using logical instructions.</p>
+</section>
+
+<!-- LANGUAGES -->
+<section id="languages">
+  <h2>Programming Languages We Focus On</h2>
+  <div class="cards">
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-robot"></i>
+      <h3>Arduino (C/C++)</h3>
+      <p>Used in robotics, sensors, and embedded systems.</p>
+      <div class="card-details">
+        <p>Arduino is a microcontroller-based platform designed to control electronic hardware through programmed instructions.</p>
+        <p>It processes sensor inputs and produces outputs that drive motors, lights, and robotic components.</p>
+        <p>Arduino programming reinforces core concepts such as timing, logic control, and hardware-software interaction.</p>
+        <p>This language is widely applied in robotics education, prototyping, and engineering research.</p>
+        <p>🎥 <a href="https://www.youtube.com/watch?v=fJWR7dBuc18" target="_blank">Arduino Fundamentals Tutorial</a></p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-brain"></i>
+      <h3>Python</h3>
+      <p>Popular for AI, automation, and robotics research.</p>
+      <div class="card-details">
+        <p>Python is a high-level programming language known for clarity and ease of use.</p>
+        <p>It is frequently used in robotics for decision-making, automation, and data processing.</p>
+        <p>Python supports artificial intelligence and machine learning applications.</p>
+        <p>Its extensive libraries make it suitable for academic research and development.</p>
+        <p>🎥 <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank">Python Academic Course</a></p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-code"></i>
+      <h3>HTML & CSS</h3>
+      <p>Used to create and design educational websites.</p>
+      <div class="card-details">
+        <p>HTML provides the structural foundation of a webpage.</p>
+        <p>CSS defines layout, color schemes, and visual hierarchy.</p>
+        <p>Together, they enable the presentation of academic content online.</p>
+        <p>These technologies support accessible and organized learning platforms.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-laptop-code"></i>
+      <h3>JavaScript</h3>
+      <p>Makes websites interactive and dynamic.</p>
+      <div class="card-details">
+        <p>JavaScript allows webpages to respond to user interaction.</p>
+        <p>It controls dynamic elements such as buttons and animations.</p>
+        <p>JavaScript enables real-time feedback in learning tools.</p>
+        <p>This technology powers interactive systems like the code runner.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CODING BASICS (KEPT & ENHANCED) -->
+<section id="basics">
+  <h2>Basic Coding Concepts (Robotics-Oriented)</h2>
+  <div class="cards">
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <h3>Variables</h3>
+      <p>Store values such as sensor data.</p>
+      <div class="card-details">
+        <p>Variables store information that a program can use and modify.</p>
+        <p>In robotics, variables hold sensor readings and system states.</p>
+        <p>They allow programs to react to changing environments.</p>
+        <p>Proper variable use improves code clarity and reliability.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <h3>Conditions</h3>
+      <p>Enable decision-making.</p>
+      <div class="card-details">
+        <p>Conditional statements allow programs to choose actions.</p>
+        <p>Robots rely on conditions to respond to sensor input.</p>
+        <p>They form the basis of intelligent system behavior.</p>
+        <p>Conditions ensure safety and logical control.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <h3>Loops</h3>
+      <p>Repeat instructions efficiently.</p>
+      <div class="card-details">
+        <p>Loops execute code repeatedly.</p>
+        <p>They control continuous robot movement and monitoring.</p>
+        <p>Loops reduce code repetition.</p>
+        <p>They are essential for automation processes.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <h3>Functions</h3>
+      <p>Organize and reuse code.</p>
+      <div class="card-details">
+        <p>Functions group instructions into reusable units.</p>
+        <p>They simplify complex robotic behavior.</p>
+        <p>Functions improve readability and maintenance.</p>
+        <p>They support modular system design.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="runner" class="code-runner">
+  <h2>Interactive Code Runner</h2>
+  <textarea id="code"><h1>Hello from HDRbytes!</h1></textarea>
+  <button onclick="runCode()">Run Code</button>
+  <iframe id="output"></iframe>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p><strong>Website Name:</strong> HDRbytes</p>
+  <p><strong>School:</strong> Alangilan Senior High School</p>
+  <p><strong>Academic Year:</strong> 2025–2026</p>
+  <p>HDRbytes was created to make coding and robotics education accessible and academic-focused.</p>
+</section>
+
+<footer>
+  <p>© 2026 <span>HDRbytes</span></p>
+</footer>
+
+<script>
+  function runCode() {
+    const code = document.getElementById('code').value;
+    const output = document.getElementById('output');
+    output.contentDocument.open();
+    output.contentDocument.write(code);
+    output.contentDocument.close();
+  }
+
+  function toggleExclusive(selectedCard) {
+    document.querySelectorAll('.card').forEach(card => {
+      if (card !== selectedCard) {
+        card.classList.remove('active');
+      }
+    });
+    selectedCard.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
