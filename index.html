@@ -8,8 +8,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     * { box-sizing: border-box; }
@@ -23,8 +23,8 @@
 
     header {
       height: 100vh;
-      background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)),
-                  url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+      background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -38,12 +38,6 @@
       font-size: 4rem;
       color: #38bdf8;
       margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
     }
 
     nav {
@@ -92,7 +86,12 @@
       box-shadow: 0 10px 30px rgba(56,189,248,0.3);
     }
 
-    /* POP-UP DETAILS */
+    .card i {
+      font-size: 2.5rem;
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
     .card-details {
       max-height: 0;
       overflow: hidden;
@@ -112,12 +111,6 @@
     .card-details a {
       color: #38bdf8;
       text-decoration: underline;
-    }
-
-    .card i {
-      font-size: 2.5rem;
-      color: #38bdf8;
-      margin-bottom: 15px;
     }
 
     .code-runner textarea {
@@ -166,7 +159,7 @@
 <header>
   <div>
     <h1>HDRbytes</h1>
-    <p>An academic-friendly learning platform for coding, robotics, and future innovators — built by students of Alangilan Senior High School.</p>
+    <p>An academic-friendly learning platform for coding, robotics, and future innovators.</p>
   </div>
 </header>
 
@@ -175,118 +168,82 @@
   <a href="#languages">Languages</a>
   <a href="#basics">Coding Basics</a>
   <a href="#runner">Code Runner</a>
-  <a href="#about">About Us</a>
+  <a href="#about">About</a>
 </nav>
 
 <section id="intro">
-  <h2>Introduction to Coding & Programming</h2>
-  <p>Coding is the foundation of modern technology. It allows humans to communicate with machines using logical instructions.</p>
+  <h2>Introduction to Coding</h2>
+  <p>Coding allows humans to communicate with machines using logic and instructions.</p>
 </section>
 
-<!-- LANGUAGES -->
 <section id="languages">
-  <h2>Programming Languages We Focus On</h2>
+  <h2>Programming Languages</h2>
   <div class="cards">
 
     <div class="card" onclick="toggleExclusive(this)">
       <i class="fas fa-robot"></i>
       <h3>Arduino (C/C++)</h3>
-      <p>Used in robotics, sensors, and embedded systems.</p>
+      <p>Robotics and embedded systems.</p>
       <div class="card-details">
-        <p>Arduino is a microcontroller-based platform designed to control electronic hardware through programmed instructions.</p>
-        <p>It processes sensor inputs and produces outputs that drive motors, lights, and robotic components.</p>
-        <p>Arduino programming reinforces core concepts such as timing, logic control, and hardware-software interaction.</p>
-        <p>This language is widely applied in robotics education, prototyping, and engineering research.</p>
-        <p>🎥 <a href="https://www.youtube.com/watch?v=fJWR7dBuc18" target="_blank">Arduino Fundamentals Tutorial</a></p>
+        <p>Arduino controls electronic components using programmed logic.</p>
+        <p>🔗 <a href="https://www.youtube.com/watch?v=fJWR7dBuc18" target="_blank">Arduino Tutorial</a></p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
       <i class="fas fa-brain"></i>
       <h3>Python</h3>
-      <p>Popular for AI, automation, and robotics research.</p>
+      <p>AI, automation, and robotics.</p>
       <div class="card-details">
-        <p>Python is a high-level programming language known for clarity and ease of use.</p>
-        <p>It is frequently used in robotics for decision-making, automation, and data processing.</p>
-        <p>Python supports artificial intelligence and machine learning applications.</p>
-        <p>Its extensive libraries make it suitable for academic research and development.</p>
-        <p>🎥 <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank">Python Academic Course</a></p>
-      </div>
-    </div>
-
-    <div class="card" onclick="toggleExclusive(this)">
-      <i class="fas fa-code"></i>
-      <h3>HTML & CSS</h3>
-      <p>Used to create and design educational websites.</p>
-      <div class="card-details">
-        <p>HTML provides the structural foundation of a webpage.</p>
-        <p>CSS defines layout, color schemes, and visual hierarchy.</p>
-        <p>Together, they enable the presentation of academic content online.</p>
-        <p>These technologies support accessible and organized learning platforms.</p>
-      </div>
-    </div>
-
-    <div class="card" onclick="toggleExclusive(this)">
-      <i class="fas fa-laptop-code"></i>
-      <h3>JavaScript</h3>
-      <p>Makes websites interactive and dynamic.</p>
-      <div class="card-details">
-        <p>JavaScript allows webpages to respond to user interaction.</p>
-        <p>It controls dynamic elements such as buttons and animations.</p>
-        <p>JavaScript enables real-time feedback in learning tools.</p>
-        <p>This technology powers interactive systems like the code runner.</p>
+        <p>Python is simple, powerful, and widely used in research.</p>
+        <p>🔗 <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank">Python Course</a></p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- CODING BASICS (KEPT & ENHANCED) -->
 <section id="basics">
-  <h2>Basic Coding Concepts (Robotics-Oriented)</h2>
+  <h2>Basic Coding Concepts</h2>
   <div class="cards">
 
     <div class="card" onclick="toggleExclusive(this)">
       <h3>Variables</h3>
-      <p>Store values such as sensor data.</p>
+      <p>Store data values.</p>
       <div class="card-details">
-        <p>Variables store information that a program can use and modify.</p>
-        <p>In robotics, variables hold sensor readings and system states.</p>
-        <p>They allow programs to react to changing environments.</p>
-        <p>Proper variable use improves code clarity and reliability.</p>
+        <p>Used to store sensor readings.</p>
+        <p>🔗 <a href="https://www.geeksforgeeks.org/variables-programming/?utm_source=chatgpt.com" target="_blank">GeeksforGeeks</a></p>
+        <p>🔗 <a href="https://www.learn2code.io/topics/variables?utm_source=chatgpt.com" target="_blank">Learn2Code</a></p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
       <h3>Conditions</h3>
-      <p>Enable decision-making.</p>
+      <p>Decision making.</p>
       <div class="card-details">
-        <p>Conditional statements allow programs to choose actions.</p>
-        <p>Robots rely on conditions to respond to sensor input.</p>
-        <p>They form the basis of intelligent system behavior.</p>
-        <p>Conditions ensure safety and logical control.</p>
+        <p>Used for logic-based actions.</p>
+        <p>🔗 <a href="https://www.geeksforgeeks.org/if-statement-in-programming/?utm_source=chatgpt.com" target="_blank">If Statements</a></p>
+        <p>🔗 <a href="https://codeofcode.org/lessons/control-structures-if-else-for-and-while-loops/?utm_source=chatgpt.com" target="_blank">Control Structures</a></p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
       <h3>Loops</h3>
-      <p>Repeat instructions efficiently.</p>
+      <p>Repeat tasks.</p>
       <div class="card-details">
-        <p>Loops execute code repeatedly.</p>
-        <p>They control continuous robot movement and monitoring.</p>
-        <p>Loops reduce code repetition.</p>
-        <p>They are essential for automation processes.</p>
+        <p>Used for continuous actions.</p>
+        <p>🔗 <a href="https://www.geeksforgeeks.org/dsa/loops-programming/?utm_source=chatgpt.com" target="_blank">Loops GFG</a></p>
+        <p>🔗 <a href="https://www.tutorialspoint.com/computer_programming/computer_programming_loops.htm?utm_source=chatgpt.com" target="_blank">TutorialsPoint</a></p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
       <h3>Functions</h3>
-      <p>Organize and reuse code.</p>
+      <p>Reusable code blocks.</p>
       <div class="card-details">
-        <p>Functions group instructions into reusable units.</p>
-        <p>They simplify complex robotic behavior.</p>
-        <p>Functions improve readability and maintenance.</p>
-        <p>They support modular system design.</p>
+        <p>Improve organization.</p>
+        <p>🔗 <a href="https://www.w3schools.com/programming/prog_functions.php?utm_source=chatgpt.com" target="_blank">W3Schools</a></p>
+        <p>🔗 <a href="https://www.programiz.com/python-programming/function?utm_source=chatgpt.com" target="_blank">Programiz</a></p>
       </div>
     </div>
 
@@ -294,18 +251,16 @@
 </section>
 
 <section id="runner" class="code-runner">
-  <h2>Interactive Code Runner</h2>
-  <textarea id="code"><h1>Hello from HDRbytes!</h1></textarea>
+  <h2>Code Runner</h2>
+  <textarea id="code"><h1>Hello HDRbytes!</h1></textarea>
   <button onclick="runCode()">Run Code</button>
   <iframe id="output"></iframe>
 </section>
 
 <section id="about">
-  <h2>About Us</h2>
-  <p><strong>Website Name:</strong> HDRbytes</p>
-  <p><strong>School:</strong> Alangilan Senior High School</p>
-  <p><strong>Academic Year:</strong> 2025–2026</p>
-  <p>HDRbytes was created to make coding and robotics education accessible and academic-focused.</p>
+  <h2>About HDRbytes</h2>
+  <p>Academic Year: 2025–2026</p>
+  <p>Built for learning coding and robotics.</p>
 </section>
 
 <footer>
@@ -314,20 +269,18 @@
 
 <script>
   function runCode() {
-    const code = document.getElementById('code').value;
-    const output = document.getElementById('output');
+    const code = document.getElementById("code").value;
+    const output = document.getElementById("output");
     output.contentDocument.open();
     output.contentDocument.write(code);
     output.contentDocument.close();
   }
 
   function toggleExclusive(selectedCard) {
-    document.querySelectorAll('.card').forEach(card => {
-      if (card !== selectedCard) {
-        card.classList.remove('active');
-      }
+    document.querySelectorAll(".card").forEach(card => {
+      if (card !== selectedCard) card.classList.remove("active");
     });
-    selectedCard.classList.toggle('active');
+    selectedCard.classList.toggle("active");
   }
 </script>
 
