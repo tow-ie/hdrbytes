@@ -5,47 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HDRbytes | Coding & Robotics Learning Hub</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #0f172a;
       color: #e5e7eb;
     }
-
     header {
       height: 100vh;
       background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)),
-                  url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+      url('https://images.unsplash.com/photo-1518770660439-4636190af475');
       background-size: cover;
-      background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 20px;
     }
-
-    header h1 {
-      font-size: 4rem;
-      color: #38bdf8;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
-
+    header h1 { font-size: 4rem; color: #38bdf8; }
     nav {
       position: sticky;
       top: 0;
@@ -54,121 +35,57 @@
       text-align: center;
       z-index: 1000;
     }
-
     nav a {
       color: #38bdf8;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
     }
-
-    section {
-      padding: 80px 10%;
-    }
-
-    section h2 {
-      color: #38bdf8;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
+    section { padding: 80px 10%; }
+    section h2 { color: #38bdf8; font-size: 2.5rem; }
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 25px;
-      margin-top: 40px;
+      margin-top: 30px;
+      align-items: flex-start;
     }
 
     .card {
+      flex: 1 1 260px;
       background: #020617;
       padding: 25px;
       border-radius: 15px;
-      transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(56,189,248,0.3);
-    }
-
-    .card i {
-      font-size: 2.5rem;
-      color: #38bdf8;
-      margin-bottom: 15px;
-    }
-
+    .card i { font-size: 2rem; color: #38bdf8; }
     .card-details {
       max-height: 0;
       overflow: hidden;
       opacity: 0;
-      margin-top: 15px;
-      transition: max-height 0.6s ease, opacity 0.4s ease;
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: #cbd5f5;
+      transition: 0.5s;
+      margin-top: 10px;
     }
-
     .card.active .card-details {
-      max-height: 900px;
+      max-height: 2000px;
       opacity: 1;
     }
-
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
       font-size: 0.9rem;
     }
-
     table th, table td {
-      border: 1px solid #1e293b;
-      padding: 10px;
-      text-align: left;
+      border: 1px solid #334155;
+      padding: 8px;
     }
-
-    table th {
-      background: #020617;
-      color: #38bdf8;
-    }
-
-    .code-runner textarea {
-      width: 100%;
-      height: 180px;
-      background: #020617;
-      color: #e5e7eb;
-      font-family: 'Roboto Mono', monospace;
-      border-radius: 10px;
-      padding: 15px;
-      border: none;
-    }
-
-    .code-runner button {
-      margin-top: 15px;
-      padding: 12px 25px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    iframe {
-      width: 100%;
-      height: 250px;
-      background: white;
-      margin-top: 20px;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: #020617;
-      padding: 30px;
+    table th { background: #020617; color: #38bdf8; }
+    footer { background: #020617; padding: 30px; text-align: center; }
+    .big-title {
+      font-size: 4rem !important;
+      font-weight: 800;
       text-align: center;
-    }
-
-    footer span {
-      color: #38bdf8;
     }
   </style>
 </head>
@@ -178,224 +95,1344 @@
 <header>
   <div>
     <h1>HDRbytes</h1>
-    <p>An academic-friendly learning platform for coding, robotics, and future innovators — built by students of Alangilan Senior High School.</p>
+    <p>An academic-friendly learning platform for coding and robotics.</p>
   </div>
 </header>
 
 <nav>
   <a href="#intro">Introduction</a>
-  <a href="#languages">Languages</a>
   <a href="#basics">Coding Basics</a>
+  <a href="#pdf">Curriculum</a>
   <a href="#runner">Code Runner</a>
-  <a href="#about">About Us</a>
 </nav>
 
 <section id="intro">
-  <h2>Introduction to Coding & Programming</h2>
-  <p>Coding is the foundation of modern technology. It allows humans to communicate with machines using logical instructions.</p>
+  <h2>Introduction to Coding</h2>
+  <p>Coding is the process of giving instructions to computers.</p>
 </section>
 
-<section id="languages">
-  <h2>Programming Languages We Focus On</h2>
+<section id="basics">
+  <h2 class="big-title">Basic Coding Concepts</h2>
+</section>
+
+<section id="pdf">
+
+  <h2 style="font-size:3rem;">Architectural Design and Curricular Integration for Multidisciplinary Programming Education</h2>
+  <p>
+    The pedagogical architecture of a comprehensive programming resource requires a synthesized
+    understanding of four distinct yet interconnected domains: embedded systems via Arduino and
+    C++, general-purpose automation through Python, structural web design using HTML, and
+    dynamic client-side interactivity with JavaScript. Programming is fundamentally defined as a
+    structured set of instructions provided to a machine to execute specific tasks, necessitating a
+    rigorous transition from human ambiguity to machine-level precision. The establishment of a
+    holistic knowledge base must address the four pillars of programming—variables, data types,
+    loops, and conditionals—while providing a roadmap that transitions from basic syntax to
+    real-world project development. ( explanation)
+  </p>
+
   <div class="cards">
 
     <div class="card" onclick="toggleExclusive(this)">
-      <i class="fas fa-robot"></i>
-      <h3>Arduino (C/C++)</h3>
-      <p>Used in robotics, sensors, and embedded systems.</p>
+      <i class="fas fa-brain"></i>
+      <h3>Theoretical Foundations of Computational Logic</h3>
       <div class="card-details">
-        <p>Arduino is a microcontroller-based platform designed to control electronic hardware through programmed instructions.</p>
-        <p>It processes sensor inputs and produces outputs that drive motors, lights, and robotic components.</p>
-        <p>Arduino programming reinforces core concepts such as timing, logic control, and hardware-software interaction.</p>
-        <p>This language is widely applied in robotics education, prototyping, and engineering research.</p>
-        <p>🎥 <a href="https://www.youtube.com/watch?v=fJWR7dBuc18" target="_blank">Arduino Fundamentals Tutorial</a></p>
+        <p>
+          Before a learner engages with specific language syntax, they must first master the underlying
+          principles of computer science that govern all programmatic operations. These principles
+          provide the cognitive scaffolding required to navigate different development environments. The
+          primary cornerstone of this foundation is the algorithm, which serves as the design of
+          instructions and rules that act as the blueprint for a program. Algorithms are frequently
+          conceptualized through flowcharts, utilizing specialized symbols to visualize logic before the
+          implementation phase.
+        </p>
+
+        <p>
+          The efficiency of a program is dictated by how it manages data, which is stored in containers
+          known as variables. Variable declaration involves the use of alphanumeric characters to
+          represent values in the computer's memory, and the behavior of these variables is constrained
+          by their data types. Classification of data is essential because it informs the compiler or
+          interpreter how much memory to allocate and what operations are permissible.
+        </p>
+
+        <table>
+          <tr>
+            <th>Fundamental Concept</th>
+            <th>Technical Definition</th>
+            <th>Operational Role</th>
+          </tr>
+          <tr>
+            <td>Algorithm</td>
+            <td>A set of guidelines for solving a problem.</td>
+            <td>Logical design of instructions.</td>
+          </tr>
+          <tr>
+            <td>Variable</td>
+            <td>Alphanumeric characters representing stored values.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Data Type</td>
+            <td>Classification of data (String, Boolean, Number).</td>
+            <td>Defines operational constraints and memory.</td>
+          </tr>
+          <tr>
+            <td>Syntax</td>
+            <td>The grammar and structural rules of a language.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Flow Control</td>
+            <td>Conditionals and loops determining direction.</td>
+            <td>Manages the sequence of task execution.</td>
+          </tr>
+        </table>
+
+        <p>
+          The interaction between these components is governed by syntax, the specific set of rules
+          defining the structure of a programming language. Much like the grammar of a spoken
+          language, syntax ensures that statements are conveyed legally and clearly to the machine.
+          When a learner moves from Python to C++, the logic remains consistent, but the syntax
+          undergoes a shift toward higher complexity and stricter rule enforcement.
+        </p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
-      <i class="fas fa-brain"></i>
-      <h3>Python</h3>
-      <p>Popular for AI, automation, and robotics research.</p>
+      <i class="fas fa-binary"></i>
+      <h3>Data Representation and Binary Systems</h3>
       <div class="card-details">
-        <p>Python is a high-level programming language known for clarity and ease of use.</p>
-        <p>It is frequently used in robotics for decision-making, automation, and data processing.</p>
-        <p>Python supports artificial intelligence and machine learning applications.</p>
-        <p>Its extensive libraries make it suitable for academic research and development.</p>
-        <p>🎥 <a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank">Python Academic Course</a></p>
+        <p>
+          At the most fundamental level, all programming languages are translated into binary
+          information—a series of zeros and ones known as bits. A bit is the smallest unit of information,
+          while a byte consists of eight bits. Understanding this digital foundation is critical for learners as
+          they move into low-level systems engineering and hardware interaction, where memory
+          management becomes a primary concern.
+        </p>
+
+        <table>
+          <tr>
+            <th>Unit of Information</th>
+            <th>Binary Representation</th>
+            <th>Capacity/Usage</th>
+          </tr>
+          <tr>
+            <td>Bit</td>
+            <td>Single 0 or 1.</td>
+            <td>Smallest unit of digital data.</td>
+          </tr>
+          <tr>
+            <td>Byte</td>
+            <td>8 Bits.</td>
+            <td>Standard unit for measuring data size.</td>
+          </tr>
+          <tr>
+            <td>Boolean</td>
+            <td>True or False.</td>
+            <td>Logical binary switch.</td>
+          </tr>
+          <tr>
+            <td>ASCII</td>
+            <td>Character encoding.</td>
+            <td>Translates numbers into human characters.</td>
+          </tr>
+        </table>
+
+        <p>
+          As programs execute, they utilize iterations—single passes through a set of operations—to
+          achieve specific results. This process is most visible in loops, which repeat a segment of cyode
+          until a predetermined condition is met. Mastering these foundational concepts allows a
+          developer to predict program behavior and identify logic errors, commonly referred to as bugs,
+          before they manifest in a production environment.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 style="font-size:3rem; margin-top:80px;">Arduino and the C++ Hardware Interface</h2>
+  <p>
+    The integration of Arduino into a curriculum provides a bridge between abstract code and
+    physical reality. Arduino is a small microcontroller board equipped with a universal serial bus
+    (USB) interface for computer connection and various sockets for wiring to external electronics. It
+    is powered by a microcontroller, described as the "brain" of the device, which executes
+    programs uploaded from a computer.
+  </p>
+
+  <div class="cards">
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-microchip"></i>
+      <h3>Hardware Components and Microcontroller Architecture</h3>
+      <div class="card-details">
+        <p>
+          A technical understanding of the Arduino board is prerequisite to writing effective C++ code for
+          it. The microcontroller is an integrated circuit designed to perform a specific number of things
+          repeatedly. The interaction with the external environment occurs through pins, each serving a
+          unique logical or electrical purpose.
+        </p>
+
+        <table>
+          <tr>
+            <th>Component</th>
+            <th>Technical Specification</th>
+            <th>Functional Purpose</th>
+          </tr>
+          <tr>
+            <td>Microcontroller</td>
+            <td>The central processing unit of the board.</td>
+            <td>Executes loaded instructions.</td>
+          </tr>
+          <tr>
+            <td>USB Port</td>
+            <td>Interface for data and power.</td>
+            <td>Connecting board to computer.</td>
+          </tr>
+          <tr>
+            <td>USB to Serial Chip</td>
+            <td>Translates data between USB and microcontroller.</td>
+            <td>Facilitates program uploading.</td>
+          </tr>
+          <tr>
+            <td>Digital Pins</td>
+            <td>Logic 0 (LOW) or 1 (HIGH).</td>
+            <td>Controlling LEDs or reading switches.</td>
+          </tr>
+          <tr>
+            <td>Analog Pins</td>
+            <td>10-bit resolution (0-1023).</td>
+            <td>Reading variable sensor data.</td>
+          </tr>
+          <tr>
+            <td>Power Pins (5V/3.3V)</td>
+            <td>Constant voltage output.</td>
+            <td>Powering external sensors.</td>
+          </tr>
+          <tr>
+            <td>GND</td>
+            <td>Ground/0 Volts.</td>
+            <td>Completing the electrical circuit.</td>
+          </tr>
+          <tr>
+            <td>VIN</td>
+            <td>Voltage In.</td>
+            <td>Connecting external power supplies.</td>
+          </tr>
+        </table>
+
+        <p>
+          Learners must grasp the importance of the USB to Serial chip, which handles the translation of
+          high-level instructions into the machine-readable binary code the microcontroller can
+          understand. This process is what allows a developer to write in C++ and see immediate results
+          in hardware performance.
+        </p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
       <i class="fas fa-code"></i>
-      <h3>HTML & CSS</h3>
-      <p>Used to create and design educational websites.</p>
+      <h3>The C++ Programming Structure for Embedded Systems</h3>
       <div class="card-details">
-        <p>HTML provides the structural foundation of a webpage.</p>
-        <p>CSS defines layout, color schemes, and visual hierarchy.</p>
-        <p>Together, they enable the presentation of academic content online.</p>
-        <p>These technologies support accessible and organized learning platforms.</p>
+        <p>
+          Arduino utilizes a version of the C++ language, which is characterized by its efficiency and
+          capability to handle computer resources effectively. C++ is a compiled language, meaning the
+          source code is translated into binary format before it can be executed on the hardware. Unlike
+          desktop programs that run from start to finish, an Arduino sketch follows a continuous execution
+          model.
+        </p>
+
+        <p>
+          The fundamental structure of an Arduino sketch is defined by two mandatory functions: setup()
+          and loop(). The setup() function is called only once when the board is powered on or reset,
+          serving to initialize pin modes, start serial communication, or configure library settings. The
+          loop() function, conversely, executes its
+          instructions repeatedly as long as the board has power.
+        </p>
+
+        <pre>
+// Basic structure of an Arduino sketch​
+void setup() {​
+  // Initialization code runs once​
+  pinMode(LED_BUILTIN, OUTPUT); ​
+}​
+​
+void loop() {​
+  // Main logic runs repeatedly​
+  digitalWrite(LED_BUILTIN, HIGH); ​
+  delay(1000);                      ​
+  digitalWrite(LED_BUILTIN, LOW);  ​
+  delay(1000);                      ​
+}​
+        </pre>
+
+        <p>
+          The use of void indicates that these functions do not return a value upon execution. Within this
+          structure, the developer employs various operators to manipulate data. Arithmetic operators are
+          used for calculations, while comparison operators such as == (equal to), != (not equal to), and >
+          (greater than) are used to evaluate conditions.
+        </p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
-      <i class="fas fa-laptop-code"></i>
-      <h3>JavaScript</h3>
-      <p>Makes websites interactive and dynamic.</p>
+      <i class="fas fa-lightbulb"></i>
+      <h3>Essential Peripheral Interaction and Circuit Logic</h3>
       <div class="card-details">
-        <p>JavaScript allows webpages to respond to user interaction.</p>
-        <p>It controls dynamic elements such as buttons and animations.</p>
-        <p>JavaScript enables real-time feedback in learning tools.</p>
-        <p>This technology powers interactive systems like the code runner.</p>
+        <p>
+          Physical computing requires a synthesis of code and circuitry. LEDs (Light Emitting Diodes) are
+          the primary visual feedback mechanism in most beginner projects. When using an LED with an
+          Arduino's 5V output, a resistor (typically 200-220 Ohms) must be placed in series to prevent the
+          LED from drawing too much current and burning out.
+        </p>
+
+        <p>
+          Interactivity is achieved through buttons and sensors. A button closes a circuit, sending a HIGH
+          signal to a digital pin that the program can read using the digitalRead() command. To ensure a
+          stable reading, a 10K Ohm resistor is recommended to ground the pin when the button is not
+          pressed, preventing "floating" signals that could cause false triggers.
+        </p>
+
+        <table>
+          <tr>
+            <th>Peripheral</th>
+            <th>Command Method</th>
+            <th>Operational Context</th>
+          </tr>
+          <tr>
+            <td>LED</td>
+            <td>digitalWrite(pin, HIGH/LOW)</td>
+            <td>Turning a component on or off.</td>
+          </tr>
+          <tr>
+            <td>Button</td>
+            <td>digitalRead(pin)</td>
+            <td>Detecting user input or triggers.</td>
+          </tr>
+          <tr>
+            <td>Potentiometer</td>
+            <td>analogRead(pin)</td>
+            <td>Reading variable voltage (0-1023).</td>
+          </tr>
+          <tr>
+            <td>Servo Motor</td>
+            <td>Servo.write(angle)</td>
+            <td>Controlling mechanical position.</td>
+          </tr>
+          <tr>
+            <td>Serial Monitor</td>
+            <td>Serial.print(value)</td>
+            <td>Displaying data on the computer screen.</td>
+          </tr>
+        </table>
+
+        <p>
+          Serial communication is the most vital debugging tool for a hardware developer. By including
+          Serial.begin(9600) in the setup(), the developer opens a communication channel between the
+          Arduino and the computer. This allows the program to output its internal state, sensor readings,
+          or error messages to the Serial Monitor, providing visibility into a system that otherwise has no
+          display.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-book"></i>
+      <h3>Advanced Hardware Control and Libraries</h3>
+      <div class="card-details">
+        <p>
+          As projects grow in complexity, developers utilize libraries to extend the capabilities of their
+          sketches. Libraries are collections of pre-written code that handle complex tasks like driving an
+          LCD, managing Wi-Fi connections, or parsing GPS data.
+        </p>
+
+        <table>
+          <tr>
+            <th>Library Type</th>
+            <th>Common Usage</th>
+            <th>Example Components</th>
+          </tr>
+          <tr>
+            <td>Communication</td>
+            <td>Inter-Integrated Circuit (I2C)</td>
+            <td>LCD Displays, RTC modules.</td>
+          </tr>
+          <tr>
+            <td>Motion Control</td>
+            <td>PWM and Stepper Logic</td>
+            <td>Servo motors, DC motor drivers.</td>
+          </tr>
+          <tr>
+            <td>Sensors</td>
+            <td>Specialized data parsing</td>
+            <td>DHT11 (Temp/Humidity), HC-SR04 (Ultrasonic).</td>
+          </tr>
+          <tr>
+            <td>IoT</td>
+            <td>Network protocols</td>
+            <td>Wi-Fi, LoRa, BLE.</td>
+          </tr>
+        </table>
+
+        <p>
+          For instance, the LiquidCrystal library allows a developer to output text to a 16x2 character
+          display, which is a common requirement for devices like weather stations or alarm systems.
+          Similarly, the Servo library abstracts the complex timing requirements of pulse-width modulation,
+          allowing the developer to simply specify an angle from 0 to 180 degrees.
+        </p>
       </div>
     </div>
 
   </div>
-</section>
 
-<section id="basics">
-  <h2>Basic Coding Concepts (Robotics-Oriented)</h2>
+  <h2 style="font-size:3rem; margin-top:80px;">Python: High-Level Automation and Scripting</h2>
+  <p>
+    Python is distinguished by its readability and efficiency, making it an ideal entry point for coding
+    for beginners. It is a high-level, interpreted language, meaning the code is processed at runtime
+    by an interpreter, which allows for rapid testing and development cycles. Python's syntax is
+    remarkably close to genuine English, allowing learners to focus on fundamental concepts like
+    variables, control flow, and functions without the boilerplate of more rigid languages.
+  </p>
+
   <div class="cards">
 
     <div class="card" onclick="toggleExclusive(this)">
-      <h3>Variables</h3>
-      <p>Store values such as sensor data.</p>
+      <i class="fas fa-download"></i>
+      <h3>Environmental Configuration and First Script</h3>
       <div class="card-details">
-        <p>Variables store data that can change while a program runs.</p>
+        <p>
+          The instructional path for Python begins with the installation of the official distribution from
+          Python.org, which is compatible with Windows, macOS, and Linux. Included in this installation is
+          IDLE (Integrated Development and Learning Environment), which provides a simplified
+          workspace for writing and running scripts.
+        </p>
+
+        <p>
+          The initial phase of Python education focuses on the "First Program," where learners are
+          introduced to basic syntax. A primary concept is the use of comments—lines of text ignored by
+          the interpreter that serve to document the code's purpose for human readers.
+        </p>
+
+        <pre>
+# This is a comment explaining the variable​
+name = "Alice" # Assigning a string to a variable​
+print("Hello, " + name)​
+        </pre>
+
+        <p>
+          In Python, variables do not require explicit type declaration; the interpreter determines the data
+          type based on the value assigned. However, understanding these types is essential for
+          performing mathematical operations and string manipulation.
+        </p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
-      <h3>Conditions</h3>
-      <p>Make decisions based on logic.</p>
+      <i class="fas fa-calculator"></i>
+      <h3>Python Data Types and Mathematical Operations</h3>
       <div class="card-details">
-        <p>Conditions allow programs to choose actions based on input.</p>
+        <p>
+          Python classifies data into several core categories, including integers for whole numbers, floats
+          for decimals, and strings for text sequences. Integers and floating-point numbers are used with
+          arithmetic operators to perform calculations, ranging from basic addition to complex scientific
+          computing.
+        </p>
+
+        <table>
+          <tr>
+            <th>Operation</th>
+            <th>Operator</th>
+            <th>Python Example</th>
+          </tr>
+          <tr>
+            <td>Addition</td>
+            <td>+</td>
+            <td>total = 10 + 5</td>
+          </tr>
+          <tr>
+            <td>Subtraction</td>
+            <td>-</td>
+            <td>diff = 10 - 5</td>
+          </tr>
+          <tr>
+            <td>Multiplication</td>
+            <td>*</td>
+            <td>prod = 10 * 5</td>
+          </tr>
+          <tr>
+            <td>Division</td>
+            <td>/</td>
+            <td>quot = 10 / 3 (Returns float)</td>
+          </tr>
+          <tr>
+            <td>Floor Division</td>
+            <td>//</td>
+            <td>quot = 10 // 3 (Returns integer)</td>
+          </tr>
+          <tr>
+            <td>Exponentiation</td>
+            <td>**</td>
+            <td>power = 2 ** 3 (Returns 8)</td>
+          </tr>
+        </table>
+
+        <p>
+          Strings in Python are highly versatile objects that can be manipulated using various built-in
+          methods. These methods allow for case conversion, whitespace removal, and searching for
+          substrings. String formatting—specifically the use of f-strings—is the modern standard for
+          embedding variables within text for output.
+        </p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
-      <h3>Loops</h3>
-      <p>Repeat instructions efficiently.</p>
+      <i class="fas fa-random"></i>
+      <h3>Control Flow and Logical Decision Making</h3>
       <div class="card-details">
-        <p>Loops execute code repeatedly.</p>
+        <p>
+          Python uses indentation to define code blocks, a structural requirement that mandates readable
+          and organized code. Conditional logic is implemented through if, elif, and else statements,
+          allowing programs to perform different actions based on specific scenarios.
+        </p>
+
+        <p>
+          Loops are utilized to handle repetitive tasks efficiently. A for loop is typically used to iterate over
+          a sequence (such as a list or a range of numbers), while a while loop continues to execute as
+          long as its condition remains true.
+        </p>
+
+        <p>
+          | Loop Type | Characteristic | Primary Application | | :--- | :--- | :--- | | For Loop | Sequential
+          iteration. | Processing every item in a list. | | While Loop | Condition-based repetition. | Running
+          a process until a state changes. | | Nested Loop | Loop within a loop. | Handling
+          multi-dimensional data. |
+        </p>
+
+        <p>
+          A critical second-order insight is the use of the break and continue keywords within loops. break
+          terminates the loop entirely, while continue skips the remainder of the current iteration and
+          moves to the next one. This granular control over program execution allows for the creation of
+          sophisticated simulations and data processing tools.
+        </p>
       </div>
     </div>
 
     <div class="card" onclick="toggleExclusive(this)">
-      <h3>Functions</h3>
-      <p>Organize and reuse code.</p>
+      <i class="fas fa-layer-group"></i>
+      <h3>Data Structures: Lists, Tuples, and Dictionaries</h3>
       <div class="card-details">
-        <p>Functions group instructions into reusable units.</p>
+        <p>
+          One of Python's greatest strengths is its built-in support for complex data structures that allow
+          for the organization of large datasets. Lists are ordered collections of objects that can be
+          modified after creation, a property known as mutability. Tuples are similar to lists but are
+          immutable, making them ideal for storing data that should not change throughout the program's
+          lifecycle.
+        </p>
+
+        <table>
+          <tr>
+            <th>Data Structure</th>
+            <th>Mutability</th>
+            <th>Ordering</th>
+            <th>Syntax</th>
+          </tr>
+          <tr>
+            <td>List</td>
+            <td>Mutable.</td>
+            <td>Ordered.</td>
+            <td>my_list =</td>
+          </tr>
+          <tr>
+            <td>Tuple</td>
+            <td>Immutable.</td>
+            <td>Ordered.</td>
+            <td>my_tuple = (1, 2, 3)</td>
+          </tr>
+          <tr>
+            <td>Dictionary</td>
+            <td>Mutable.</td>
+            <td>Key-Value Pairs.</td>
+            <td>my_dict = {"id": 1}</td>
+          </tr>
+          <tr>
+            <td>Set</td>
+            <td>Mutable.</td>
+            <td>Unordered.</td>
+            <td>my_set = {1, 2, 3}</td>
+          </tr>
+        </table>
+
+        <p>
+          Dictionaries are particularly powerful, storing information in pairs of data called key-value pairs.
+          This structure is analogous to a real-world dictionary or index, where a unique key (such as a
+          word) is used to retrieve an associated value (such as a definition).
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-cubes"></i>
+      <h3>Modularity, Scopes, and Object-Oriented Programming</h3>
+      <div class="card-details">
+        <p>
+          To manage complexity, Python encourages modular programming, where code is broken into
+          smaller, reusable chunks called functions. A function is defined using the def keyword and can
+          accept arguments—values passed into the function to influence its behavior. Once defined, a
+          function can be "called" multiple times, reducing redundancy and improving maintainability.
+        </p>
+
+        <p>
+          The behavior of variables within functions is governed by scopes and the LEGB rule (Local,
+          Enclosing, Global, and Built-in). This rule defines the hierarchy in which Python looks for
+          variable names :
+        </p>
+
+        <p>●​ Local: Variables defined inside a function.</p>
+        <p>●​ Enclosing: Variables in the local scope of outer functions (for nested functions).</p>
+        <p>●​ Global: Variables defined at the top level of a script.</p>
+        <p>●​ Built-in: Pre-defined names like print and len.</p>
+
+        <p>
+          Beyond basic functions, Python supports Object-Oriented Programming (OOP), where code is
+          viewed as independent objects that bundle data (attributes) and methods (functions) into a
+          single unit known as a class. OOP enables encapsulation, where direct access to internal
+          information is restricted to ensure controlled interaction.
+        </p>
       </div>
     </div>
 
   </div>
+
+  <h2 style="font-size:3rem; margin-top:80px;">Web Foundations: HTML and Structural Markup</h2>
+  <p>
+    The development of a modern web presence begins with HTML (HyperText Markup Language),
+    the standard language used to define and structure web content. HTML is not a programming
+    language in the sense of executing logic; rather, it is a markup language that uses tags to
+    specify the appearance and placement of elements like text, images, and links.
+  </p>
+
+  <div class="cards">
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-file-code"></i>
+      <h3>Document Structure and Semantic Integrity</h3>
+      <div class="card-details">
+        <p>
+          A valid HTML document follows a hierarchical structure that informs the browser how to render
+          the content. The root of every document is the &lt;html&gt; element, which contains the &lt;head&gt; for
+          metadata and the &lt;body&gt; for the visible content.
+        </p>
+
+        <table>
+          <tr>
+            <th>Fundamental Tag</th>
+            <th>Category</th>
+            <th>Functional Purpose</th>
+          </tr>
+          <tr>
+            <td>&lt;!DOCTYPE html&gt;</td>
+            <td>Declaration</td>
+            <td>Defines the document as HTML5.</td>
+          </tr>
+          <tr>
+            <td>&lt;html&gt;</td>
+            <td>Root</td>
+            <td>The container for all HTML elements.</td>
+          </tr>
+          <tr>
+            <td>&lt;head&gt;</td>
+            <td>Metadata</td>
+            <td>Contains title, character set, and scripts.</td>
+          </tr>
+          <tr>
+            <td>&lt;title&gt;</td>
+            <td>Identification</td>
+            <td>Defines the page title shown in the browser tab.</td>
+          </tr>
+          <tr>
+            <td>&lt;body&gt;</td>
+            <td>Content</td>
+            <td>Contains the visible parts of the website.</td>
+          </tr>
+        </table>
+
+        <p>
+          Modern web standards emphasize semantic HTML, which utilizes tags that describe the
+          meaning of the content rather than just its appearance. This is essential for accessibility,
+          ensuring that screen readers and other assistive technologies can interpret the page structure
+          correctly.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-sitemap"></i>
+      <h3>Sectioning and Content Organization</h3>
+      <div class="card-details">
+        <p>
+          Semantic sectioning tags allow developers to create a logical layout that browsers and search
+          engines can parse efficiently.
+        </p>
+
+        <table>
+          <tr>
+            <th>Semantic Tag</th>
+            <th>Recommended Use Case</th>
+          </tr>
+          <tr>
+            <td>&lt;header&gt;</td>
+            <td>Introduction or navigation links for a section.</td>
+          </tr>
+          <tr>
+            <td>&lt;nav&gt;</td>
+            <td>A block of navigation links.</td>
+          </tr>
+          <tr>
+            <td>&lt;main&gt;</td>
+            <td>The unique, primary content of the document.</td>
+          </tr>
+          <tr>
+            <td>&lt;section&gt;</td>
+            <td>A thematic grouping of content.</td>
+          </tr>
+          <tr>
+            <td>&lt;article&gt;</td>
+            <td>Self-contained, distributable content (e.g., a blog post).</td>
+          </tr>
+          <tr>
+            <td>&lt;aside&gt;</td>
+            <td>Content indirectly related to the main text (e.g., sidebars).</td>
+          </tr>
+          <tr>
+            <td>&lt;footer&gt;</td>
+            <td>Closing information, copyrights, or contact details.</td>
+          </tr>
+        </table>
+
+        <p>
+          Within these sections, text content is organized using headings (&lt;h1&gt; to &lt;h6&gt;) and paragraphs
+          (&lt;p&gt;). Lists are another fundamental element, either as unordered (&lt;ul&gt;) bulleted lists or
+          ordered (&lt;ol&gt;) numbered lists.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-link"></i>
+      <h3>Interactive Elements: Links, Media, and Forms</h3>
+      <div class="card-details">
+        <p>
+          The "hypertext" in HTML refers to the ability to link documents together using the &lt;a&gt; (anchor)
+          tag. For an anchor tag to function, it requires the href attribute, which specifies the destination
+          URL.
+        </p>
+
+        <p>
+          Media integration is achieved through elements like &lt;img&gt; for images, which requires a src
+          (source) attribute to define the file path and an alt attribute for descriptive text. Advanced
+          multimedia support is provided by the &lt;video&gt; and &lt;audio&gt; tags, which allow for embedded
+          playback of audiovisual content.
+        </p>
+
+        <table>
+          <tr>
+            <th>Component</th>
+            <th>Tag</th>
+            <th>Required Attributes</th>
+          </tr>
+          <tr>
+            <td>Hyperlink</td>
+            <td>&lt;a&gt;</td>
+            <td>href.</td>
+          </tr>
+          <tr>
+            <td>Image</td>
+            <td>&lt;img&gt;</td>
+            <td>src, alt.</td>
+          </tr>
+          <tr>
+            <td>Form</td>
+            <td>&lt;form&gt;</td>
+            <td>action, method.</td>
+          </tr>
+          <tr>
+            <td>Text Input</td>
+            <td>&lt;input&gt;</td>
+            <td>type="text".</td>
+          </tr>
+          <tr>
+            <td>Button</td>
+            <td>&lt;button&gt;</td>
+            <td>type="submit".</td>
+          </tr>
+        </table>
+
+        <p>
+          Forms are the primary mechanism for collecting user input. A &lt;form&gt; element acts as a
+          container for various input controls, such as &lt;input&gt; fields, &lt;textarea&gt; for multi-line text, and
+          &lt;select&gt; for dropdown lists. Each input should be associated with a &lt;label&gt; to improve usability
+          and accessibility.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-tag"></i>
+      <h3>Attributes and Global Properties</h3>
+      <div class="card-details">
+        <p>
+          Attributes provide additional information or configuration for HTML elements. Global attributes
+          can be applied to almost any element.
+        </p>
+
+        <p>●​ id: A unique identifier used to target a specific element for styling or JavaScript interaction.</p>
+        <p>●​ class: A non-unique identifier used to group multiple elements for collective styling.</p>
+        <p>●​ style: Inline CSS to apply specific visual rules directly to an element.</p>
+        <p>●​ title: Extra information about an element, often displayed as a tooltip.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 style="font-size:3rem; margin-top:80px;">JavaScript: Dynamic Interactivity and the DOM</h2>
+  <p>
+    JavaScript is an object-oriented scripting language used to specify the behavior of HTML
+    elements and add interactivity to websites. While HTML provides the structure, JavaScript
+    allows the page to respond to user actions without requiring a full page reload.
+  </p>
+
+  <div class="cards">
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-bolt"></i>
+      <h3>Language Fundamentals and Logic</h3>
+      <div class="card-details">
+        <p>
+          JavaScript's basic syntax includes variables, which can be declared using let, const, or var, and
+          a wide array of operators for math and logic. Like Python, JavaScript supports common control
+          structures such as if/else statements and loops.
+        </p>
+
+        <p>
+          One unique aspect of JavaScript is its handling of functions. They can be declared traditionally
+          or as "arrow functions," which provide a more concise syntax.
+        </p>
+
+        <pre>
+// Traditional Function​
+function greet(name) {​
+    return "Hello, " + name;​
+}​
+​
+// Arrow Function​
+const greet = (name) => `Hello, ${name}`;​
+        </pre>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-project-diagram"></i>
+      <h3>The Document Object Model (DOM) and Scripting</h3>
+      <div class="card-details">
+        <p>
+          The DOM (Document Object Model) is a programming interface for web documents. It
+          represents the page as a tree of objects, where each HTML element is a "node" that JavaScript
+          can access and manipulate.
+        </p>
+
+        <table>
+          <tr>
+            <th>DOM Task</th>
+            <th>JavaScript Method</th>
+          </tr>
+          <tr>
+            <td>Select by ID</td>
+            <td>document.getElementById('id').</td>
+          </tr>
+          <tr>
+            <td>Select by Selector</td>
+            <td>document.querySelector('.class').</td>
+          </tr>
+          <tr>
+            <td>Create Element</td>
+            <td>document.createElement('div').</td>
+          </tr>
+          <tr>
+            <td>Add to Page</td>
+            <td>parentElement.appendChild(newElement).</td>
+          </tr>
+          <tr>
+            <td>Change Text</td>
+            <td>element.textContent = 'New Content'.</td>
+          </tr>
+        </table>
+
+        <p>
+          DOM manipulation allows for dynamic updates, such as a "Quote Generator" that selects a
+          random string from an array and displays it on the page when a button is clicked.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-mouse-pointer"></i>
+      <h3>Event Listeners and User Interaction</h3>
+      <div class="card-details">
+        <p>
+          An event is a signal fired by the browser when something significant happens, such as the user
+          clicking a button, pressing a key, or the page finishing its loading process. Developers use event
+          listeners to acknowledge these actions and run specific code in response.
+        </p>
+
+        <table>
+          <tr>
+            <th>Event Name</th>
+            <th>Trigger</th>
+            <th>Typical Application</th>
+          </tr>
+          <tr>
+            <td>click</td>
+            <td>User clicks an element.</td>
+            <td>Submitting forms, triggering animations.</td>
+          </tr>
+          <tr>
+            <td>mouseover</td>
+            <td>Cursor hovers over element.</td>
+            <td>Showing menus, highlighting text.</td>
+          </tr>
+          <tr>
+            <td>keydown</td>
+            <td>A key is pressed.</td>
+            <td>Game controls, search bars.</td>
+          </tr>
+          <tr>
+            <td>change</td>
+            <td>Value of an input changes.</td>
+            <td>Real-time form validation.</td>
+          </tr>
+          <tr>
+            <td>load</td>
+            <td>Page finishes loading.</td>
+            <td>Initializing app state or animations.</td>
+          </tr>
+        </table>
+
+        <p>
+          The addEventListener() method is the preferred mechanism for registering these handlers
+          because it allows for multiple listeners on a single element and supports the clean removal of
+          listeners when they are no longer needed.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-stream"></i>
+      <h3>Advanced Array Methods and Data Processing</h3>
+      <div class="card-details">
+        <p>
+          Modern JavaScript development relies heavily on powerful array methods that allow for the
+          efficient transformation and processing of data.
+        </p>
+
+        <table>
+          <tr>
+            <th>Method</th>
+            <th>Functional Result</th>
+            <th>Use Case</th>
+          </tr>
+          <tr>
+            <td>map()</td>
+            <td>Creates a new array with modified elements.</td>
+            <td>Doubling values or extracting specific object properties.</td>
+          </tr>
+          <tr>
+            <td>filter()</td>
+            <td>Creates a new array with elements matching a condition.</td>
+            <td>Finding only even numbers or "Force Users" in a list.</td>
+          </tr>
+          <tr>
+            <td>reduce()</td>
+            <td>Combines array into a single value.</td>
+            <td>Calculating the sum of an array or finding a maximum.</td>
+          </tr>
+          <tr>
+            <td>find()</td>
+            <td>Returns the first matching element.</td>
+            <td>Locating a specific user object by ID.</td>
+          </tr>
+          <tr>
+            <td>forEach()</td>
+            <td>Runs a function for each element.</td>
+            <td>Logging every item to the console for debugging.</td>
+          </tr>
+        </table>
+
+        <p>
+          These methods are often "chained" together, allowing a developer to filter a dataset and then
+          immediately map the results into a new format in a single, readable line of code.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 style="font-size:3rem; margin-top:80px;">Professional Workflow and Version Control</h2>
+  <p>
+    The transition from a beginner to an intermediate developer involves mastering the tools of
+    professional software creation. Git and GitHub are the industry-standard solutions for version
+    control, allowing developers to track changes, collaborate with others, and maintain a full history
+    of their work.
+  </p>
+
+  <div class="cards">
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-folder-open"></i>
+      <h3>The Git Workflow: Repository Management</h3>
+      <div class="card-details">
+        <p>
+          Git is a distributed version control system that creates a local repository—a special .git
+          folder—inside a project directory to track all file revisions.
+        </p>
+
+        <table>
+          <tr>
+            <th>Command</th>
+            <th>Action</th>
+            <th>Functional Goal</th>
+          </tr>
+          <tr>
+            <td>git init</td>
+            <td>Initializes a local repo.</td>
+            <td>Start tracking a new project.</td>
+          </tr>
+          <tr>
+            <td>git clone</td>
+            <td>Copies a remote repo.</td>
+            <td>Obtain a working copy of an existing project.</td>
+          </tr>
+          <tr>
+            <td>git add.</td>
+            <td>Stages changes.</td>
+            <td>Prepare snapshots for commitment.</td>
+          </tr>
+          <tr>
+            <td>git commit</td>
+            <td>Saves a snapshot to history.</td>
+            <td>Finalize a set of changes with a message.</td>
+          </tr>
+          <tr>
+            <td>git status</td>
+            <td>Lists updated/untracked files.</td>
+            <td>Review current state before committing.</td>
+          </tr>
+        </table>
+
+        <p>
+          The "staging area" is a critical concept in Git; it acts as a buffer between the working directory
+          and the official history, allowing a developer to choose exactly which changes to include in the
+          next commit.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-code-branch"></i>
+      <h3>Branching and Collaboration</h3>
+      <div class="card-details">
+        <p>
+          One of Git's most powerful features is branching, which allows a developer to create isolated
+          environments to work on new features or bug fixes without affecting the "main" deployable code.
+        </p>
+
+        <p>●​ git branch: Lists existing branches or creates a new one.</p>
+        <p>●​ git checkout: Switches between branches.</p>
+        <p>●​ git merge: Integrates changes from one branch into another.</p>
+        <p>●​ git pull: Downloads changes from a remote repo and merges them into the current branch.</p>
+        <p>●​ git push: Uploads local commits to a remote repository like GitHub.</p>
+
+        <p>
+          In a collaborative environment, developers often use the "Forking Workflow," where they create
+          their own copy of a project, make changes in a branch, and then submit a "Pull Request" to the
+          original maintainers for review.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 style="font-size:3rem; margin-top:80px;">Debugging: The Art and Science of Error Correction</h2>
+  <p>
+    Bugs are an inevitable part of the development process. Debugging is the systematic process of
+    locating and fixing these errors to ensure a program acts as expected. Effective debugging
+    requires a combination of logical deduction and the use of specialized tools.
+  </p>
+
+  <div class="cards">
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-exclamation-triangle"></i>
+      <h3>Categorization of Programming Errors</h3>
+      <div class="card-details">
+        <p>Errors generally fall into three primary categories :</p>
+        <p>1.​ Syntax Errors: Violations of the language's grammar rules that prevent the code from running (e.g., a missing semicolon or an unclosed quote).</p>
+        <p>2.​ Runtime Errors: Crashes that occur while the program is executing (e.g., division by zero or calling a variable that doesn't exist).</p>
+        <p>3.​ Logic Errors: The program runs but produces incorrect or unintended results (e.g., a "buggy" function that adds numbers instead of subtracting them).</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-bug"></i>
+      <h3>Proven Debugging Techniques</h3>
+      <div class="card-details">
+        <p>
+          A multidisciplinary curriculum should emphasize several core strategies that apply across all
+          coding environments.
+        </p>
+
+        <table>
+          <tr>
+            <th>Technique</th>
+            <th>Description</th>
+            <th>Operational Step</th>
+          </tr>
+          <tr>
+            <td>Print Debugging</td>
+            <td>Inserting output statements to track values.</td>
+            <td>Add print() or Serial.println() after every major step.</td>
+          </tr>
+          <tr>
+            <td>Rubber Ducking</td>
+            <td>Explaining code line-by-line to an inanimate object.</td>
+            <td>Verbalize logic to identify blind spots in reasoning.</td>
+          </tr>
+          <tr>
+            <td>Dry Running</td>
+            <td>Visualizing execution on paper.</td>
+            <td>Manually update variable values for each loop iteration.</td>
+          </tr>
+          <tr>
+            <td>Breakpoints</td>
+            <td>Pausing code execution at specific points.</td>
+            <td>Use an IDE to inspect memory state at the moment of failure.</td>
+          </tr>
+          <tr>
+            <td>Git Bisect</td>
+            <td>Reverting to previous versions.</td>
+            <td>Identify exactly which commit introduced the bug.</td>
+          </tr>
+        </table>
+
+        <p>
+          A vital lesson for beginners is to reproduce the problem consistently before attempting a fix. By
+          understanding the specific inputs and conditions that cause the failure, the developer can
+          narrow down the search area and verify the eventual solution.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 style="font-size:3rem; margin-top:80px;">Curricular Synthesis and Career Pathways</h2>
+  <p>
+    The goal of providing a "whole knowledge" for coding is to enable learners to choose a career
+    track that aligns with their interests. The combination of hardware (Arduino), high-level logic
+    (Python), and web development (HTML/JS) covers almost every major modern industry.
+  </p>
+
+  <table>
+    <tr>
+      <th>Career Path</th>
+      <th>Primary Languages</th>
+      <th>Focus Area</th>
+    </tr>
+    <tr>
+      <td>Web Development</td>
+      <td>HTML, CSS, JavaScript.</td>
+      <td>Building interactive user interfaces and websites.</td>
+    </tr>
+    <tr>
+      <td>Data Science</td>
+      <td>Python.</td>
+      <td>Data analysis, machine learning, and visualization.</td>
+    </tr>
+    <tr>
+      <td>IoT & Hardware</td>
+      <td>C++, Arduino, Python.</td>
+      <td>Connecting physical devices to the digital world.</td>
+    </tr>
+    <tr>
+      <td>Game Development</td>
+      <td>C++, Python, JavaScript.</td>
+      <td>Creating virtual worlds and game physics.</td>
+    </tr>
+    <tr>
+      <td>Systems Engineering</td>
+      <td>C, C++.</td>
+      <td>Deep dive into memory management and low-level code.</td>
+    </tr>
+  </table>
+
+  <h2 style="font-size:3rem; margin-top:80px;">Integrated Instructional Content for the Proposed Website</h2>
+  <p>
+    The content of the proposed website should be organized to reflect the sequential nature of skill
+    acquisition, moving from fundamental logic to language-specific mastery and finally to
+    professional implementation.
+  </p>
+
+  <div class="cards">
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-1"></i>
+      <h3>Module 1: Foundational Logic and Computational Thinking</h3>
+      <div class="card-details">
+        <p>
+          This module serves as the introduction for all learners, regardless of their eventual
+          specialization. It focuses on the four pillars of programming—Variables, Data Types, Loops, and
+          Conditionals—using Python as the primary instructional medium due to its simplicity. Learners
+          will create their first algorithms and use flowcharts to solve basic mathematical problems.
+        </p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-2"></i>
+      <h3>Module 2: The Physical World with Arduino and C++</h3>
+      <div class="card-details">
+        <p>
+          Transitioning to embedded systems, this module introduces the concepts of circuitry and
+          low-level hardware control. Learners will explore the Arduino ecosystem, understanding how
+          microcontrollers execute code in a continuous loop.
+        </p>
+
+        <p>●​ Hardware Setup: Identifying pins and connecting basic components like LEDs and buttons.</p>
+        <p>●​ The Sketch Architecture: Mastering the setup() and loop() functions.</p>
+        <p>●​ Real-World Application: Building a "Traffic Light Simulation" to practice timing and state management.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-3"></i>
+      <h3>Module 3: Structural and Dynamic Web Development</h3>
+      <div class="card-details">
+        <p>
+          This module covers the "Holy Trinity" of the web. Learners start with HTML to build the skeleton
+          of a site, focusing on semantic tags and accessibility.
+        </p>
+
+        <p>●​ Structuring Content: Using &lt;header&gt;, &lt;main&gt;, and &lt;section&gt; for logical layouts.</p>
+        <p>●​ Dynamic Behavior: Introducing JavaScript to handle events like button clicks and form submissions.</p>
+        <p>●​ DOM Scripting: Learning how to update a webpage's content without refreshing, using the Document Object Model.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-4"></i>
+      <h3>Module 4: High-Level Automation with Python</h3>
+      <div class="card-details">
+        <p>
+          Returning to Python, this module explores its more advanced features, preparing learners for
+          data analysis or backend development.
+        </p>
+
+        <p>●​ Complex Data Structures: Mastering lists, tuples, and dictionaries for data organization.</p>
+        <p>●​ Modular Design: Writing reusable functions and exploring Object-Oriented Programming (OOP).</p>
+        <p>●​ External Integration: Using pip to install libraries for web scraping or scientific computing.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleExclusive(this)">
+      <i class="fas fa-5"></i>
+      <h3>Module 5: Professional Workflow and Troubleshooting</h3>
+      <div class="card-details">
+        <p>
+          The final module equips learners with the tools used in professional software houses.
+        </p>
+
+        <p>●​ Version Control: Learning Git commands and the GitHub workflow for collaboration.</p>
+        <p>●​ Debugging Masterclass: Applying systematic troubleshooting techniques like breakpoints and rubber ducking.</p>
+        <p>●​ Capstone Project: Building a "Smart IoT Dashboard" that uses an Arduino to read sensors, a Python script to process data, and an HTML/JavaScript interface to display results.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 style="font-size:3rem; margin-top:80px;">Strategic Synthesis of Pedagogical Principles</h2>
+  <p>
+    The ultimate efficacy of a programming website relies on its ability to foster consistency and
+    practical application. Research suggests that a dedicated practice of roughly 40 minutes a day
+    for a month is sufficient to gain functional competence in a new language. The website must
+    encourage this habit by providing hands-on coding problems, real-world projects, and a
+    community for accountability.
+  </p>
+
+  <p>
+    By integrating context—such as the origin of C++, the mechanism of the Python interpreter, and
+    the future outlook of web standards—directly alongside the technical facts, the resource
+    provides a rich, insightful narrative that goes beyond simple tutorials. This depth of
+    understanding enables learners to not just write code, but to engineer solutions that are
+    performant, accessible, and sustainable. Whether they are controlling a robotic arm with an
+    Arduino or building a machine learning model with Python, they will be equipped with the "whole
+    knowledge" required to succeed in the modern technological landscape.
+  </p>
+
 </section>
-
-<!-- ================== ADDED CONTENT FROM PDF ================== -->
-<section id="foundations">
-  <h2>Foundational Logic & Computational Thinking</h2>
-
-  <div class="card active">
-    <i class="fas fa-book"></i>
-    <h3>Theoretical Foundations of Computational Logic (main)</h3>
-    <div class="card-details" style="max-height:1000px;opacity:1;">
-      <p>
-        Programming is fundamentally based on logic rather than syntax.
-        These principles govern how instructions are designed, executed,
-        and evaluated across all programming languages.
-      </p>
-    </div>
-  </div>
-
-  <div class="card" onclick="toggleExclusive(this)">
-    <i class="fas fa-diagram-project"></i>
-    <h3>Algorithms (sub)</h3>
-    <p>Blueprints of problem-solving logic.</p>
-    <div class="card-details">
-      <table>
-        <tr><th>Concept</th><th>Description</th></tr>
-        <tr><td>Algorithm</td><td>Step-by-step solution</td></tr>
-        <tr><td>Flowchart</td><td>Visual logic map</td></tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="card" onclick="toggleExclusive(this)">
-    <i class="fas fa-database"></i>
-    <h3>Variables & Data Types (sub)</h3>
-    <div class="card-details">
-      <table>
-        <tr><th>Type</th><th>Example</th></tr>
-        <tr><td>Integer</td><td>10</td></tr>
-        <tr><td>String</td><td>"Hello"</td></tr>
-        <tr><td>Boolean</td><td>true / false</td></tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="card active">
-    <i class="fas fa-microchip"></i>
-    <h3>Data Representation & Binary Systems (main)</h3>
-    <div class="card-details" style="max-height:1000px;opacity:1;">
-      <p>
-        All programs are ultimately translated into binary data,
-        which consists of zeros and ones.
-      </p>
-    </div>
-  </div>
-
-  <div class="card" onclick="toggleExclusive(this)">
-    <i class="fas fa-circle-nodes"></i>
-    <h3>Bits, Bytes, and Encoding (sub)</h3>
-    <div class="card-details">
-      <table>
-        <tr><th>Unit</th><th>Description</th></tr>
-        <tr><td>Bit</td><td>0 or 1</td></tr>
-        <tr><td>Byte</td><td>8 bits</td></tr>
-        <tr><td>ASCII</td><td>Character encoding</td></tr>
-      </table>
-    </div>
-  </div>
-
-</section>
-
-<section id="runner" class="code-runner">
-  <h2>Interactive Code Runner</h2>
-  <textarea id="code"><h1>Hello from HDRbytes!</h1></textarea>
-  <button onclick="runCode()">Run Code</button>
-  <iframe id="output"></iframe>
-</section>
-
-<section id="about">
-  <h2>About Us</h2>
-  <p><strong>Website Name:</strong> HDRbytes</p>
-  <p><strong>School:</strong> Alangilan Senior High School</p>
-  <p><strong>Academic Year:</strong> 2025–2026</p>
-  <p>HDRbytes was created to make coding and robotics education accessible and academic-focused.</p>
-</section>
-
-<footer>
-  <p>© 2026 <span>HDRbytes</span></p>
-</footer>
 
 <script>
-  function runCode() {
-    const code = document.getElementById('code').value;
-    const output = document.getElementById('output');
-    output.contentDocument.open();
-    output.contentDocument.write(code);
-    output.contentDocument.close();
-  }
-
-  function toggleExclusive(selectedCard) {
-    document.querySelectorAll('.card').forEach(card => {
-      if (card !== selectedCard) {
-        card.classList.remove('active');
-      }
-    });
-    selectedCard.classList.toggle('active');
-  }
+function toggleExclusive(selected) {
+  document.querySelectorAll('.card').forEach(c => {
+    if (c !== selected) c.classList.remove('active');
+  });
+  selected.classList.toggle('active');
+}
 </script>
+<section id="code-runner" style="padding: 50px 10%; background: #020617; color: #e5e7eb;">
+  <h2 style="color: #38bdf8; text-align:center;">Interactive Code Runner</h2>
 
+  <div id="editor" style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+    <textarea id="code" style="width:100%; height:250px; background:#0f172a; color:#e5e7eb; padding:10px; border-radius:8px; font-family:monospace;">
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Hello HDRbytes!</h1>
+    <p>Edit this code and click Run.</p>
+  </body>
+</html>
+    </textarea>
+
+    <button onclick="runCode()" style="width:120px; padding:10px; background:#38bdf8; color:#020617; border:none; border-radius:5px; cursor:pointer;">
+      Run Code
+    </button>
+
+    <iframe id="output" style="width:100%; height:300px; margin-top:15px; border:2px solid #334155; border-radius:8px;"></iframe>
+  </div>
+</section>
+<script>
+function runCode() {
+  const code = document.getElementById('code').value;
+  const iframe = document.getElementById('output');
+  iframe.srcdoc = code;
+}
+// Initialize with default code
+runCode();
+</script>
+<script>
+function runCode() {
+  const code = document.getElementById('code').value;
+
+  // Wrap user code with a style tag to make text white
+  const styledCode = `
+    <style>
+      body { background-color: #0f172a; color: #ffffff; font-family: monospace; }
+      h1, h2, h3, p, div, span { color: #ffffff; }
+    </style>
+    ${code}
+  `;
+
+  const iframe = document.getElementById('output');
+  iframe.srcdoc = styledCode;
+}
+
+// Initialize with default code
+runCode();
+</script>
 </body>
 </html>
