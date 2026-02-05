@@ -10,23 +10,33 @@
 
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #0f172a;
       color: #e5e7eb;
     }
+
     header {
       height: 100vh;
       background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)),
       url('https://images.unsplash.com/photo-1518770660439-4636190af475');
       background-size: cover;
+      background-position: center;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 30px;
     }
-    header h1 { font-size: 4rem; color: #38bdf8; }
+
+    header h1 {
+      font-size: 4rem;
+      color: #38bdf8;
+      margin: 0;
+    }
+
     nav {
       position: sticky;
       top: 0;
@@ -35,14 +45,32 @@
       text-align: center;
       z-index: 1000;
     }
+
     nav a {
       color: #38bdf8;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
     }
-    section { padding: 80px 10%; }
-    section h2 { color: #38bdf8; font-size: 2.5rem; }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    /* Make Basic Coding Concepts bigger */
+    #basics h2 {
+      font-size: 3.2rem;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    section h2 {
+      color: #38bdf8;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    /* FLASHCARDS FIX (Flex instead of Grid) */
     .cards {
       display: flex;
       flex-wrap: wrap;
@@ -52,39 +80,72 @@
     }
 
     .card {
-      flex: 1 1 260px;
+      flex: 1 1 280px;
       background: #020617;
       padding: 25px;
       border-radius: 15px;
       cursor: pointer;
+      transition: 0.2s ease;
     }
-    .card i { font-size: 2rem; color: #38bdf8; }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card i {
+      font-size: 2rem;
+      color: #38bdf8;
+    }
+
+    .card h3 {
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
+
+    /* FIX: show/hide properly on mobile */
     .card-details {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: 0.5s;
-      margin-top: 10px;
+      display: none;
+      margin-top: 15px;
+      line-height: 1.6;
     }
+
     .card.active .card-details {
-      max-height: 2000px;
-      opacity: 1;
+      display: block;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
       font-size: 0.9rem;
     }
+
     table th, table td {
       border: 1px solid #334155;
       padding: 8px;
+      vertical-align: top;
     }
-    table th { background: #020617; color: #38bdf8; }
-    footer { background: #020617; padding: 30px; text-align: center; }
-    .big-title {
-      font-size: 4rem !important;
-      font-weight: 800;
+
+    table th {
+      background: #020617;
+      color: #38bdf8;
+    }
+
+    pre {
+      background: #0f172a;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin-top: 15px;
+      border: 1px solid #334155;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #020617;
+      padding: 30px;
       text-align: center;
     }
   </style>
@@ -95,7 +156,9 @@
 <header>
   <div>
     <h1>HDRbytes</h1>
-    <p>An academic-friendly learning platform for coding and robotics.</p>
+    <p style="font-family:'Roboto Mono', monospace; font-size:1.4rem; line-height:1.6; max-width:850px; margin: 20px auto 0;">
+      An academic-friendly learning platform for coding, robotics, and future innovators — built by students of Alangilan Senior High School.
+    </p>
   </div>
 </header>
 
@@ -104,21 +167,35 @@
   <a href="#basics">Coding Basics</a>
   <a href="#pdf">Curriculum</a>
   <a href="#runner">Code Runner</a>
-  
+  <a href="#about">About Us</a>
 </nav>
 
 <section id="intro">
-  <h2>Introduction to Coding</h2>
-  <p>Coding is the process of giving instructions to computers.</p>
+  <h2>Introduction to Coding and Programming</h2>
+  <p>
+    Coding is the foundation of modern technology. It allows humans to communicate with machines using logical instructions.
+    In robotics and research, coding controls movement, decision-making, and automation systems. Programming also enables
+    the creation of software, websites, and mobile applications that improve daily life and productivity. By learning
+    different programming languages such as Python, Java, and JavaScript, individuals can solve complex problems, automate
+    repetitive tasks, and build innovative solutions. Coding encourages logical thinking, problem-solving skills, and creativity,
+    making it a critical skill in almost every industry today.
+  </p>
 </section>
 
 <section id="basics">
-  <h2 class="big-title">Basic Coding Concepts</h2>
+  <h2>Basic Coding Concepts</h2>
+  <p>
+    This section introduces learners to the building blocks of programming such as variables,
+    data types, loops, and conditionals.
+  </p>
 </section>
 
+<!-- ================= PDF CONTENT SECTION ================= -->
 <section id="pdf">
 
-  <h2 style="font-size:3rem;">Architectural Design and Curricular Integration for Multidisciplinary Programming Education</h2>
+  <h2 style="font-size:3rem;">
+    Architectural Design and Curricular Integration for Multidisciplinary Programming Education
+  </h2>
   <p>
     The pedagogical architecture of a comprehensive programming resource requires a synthesized
     understanding of four distinct yet interconnected domains: embedded systems via Arduino and
@@ -240,7 +317,7 @@
 
         <p>
           As programs execute, they utilize iterations—single passes through a set of operations—to
-          achieve specific results. This process is most visible in loops, which repeat a segment of cyode
+          achieve specific results. This process is most visible in loops, which repeat a segment of code
           until a predetermined condition is met. Mastering these foundational concepts allows a
           developer to predict program behavior and identify logic errors, commonly referred to as bugs,
           before they manifest in a production environment.
@@ -345,24 +422,23 @@
           The fundamental structure of an Arduino sketch is defined by two mandatory functions: setup()
           and loop(). The setup() function is called only once when the board is powered on or reset,
           serving to initialize pin modes, start serial communication, or configure library settings. The
-          loop() function, conversely, executes its
-          instructions repeatedly as long as the board has power.
+          loop() function, conversely, executes its instructions repeatedly as long as the board has power.
         </p>
 
         <pre>
-// Basic structure of an Arduino sketch​
-void setup() {​
-  // Initialization code runs once​
-  pinMode(LED_BUILTIN, OUTPUT); ​
-}​
-​
-void loop() {​
-  // Main logic runs repeatedly​
-  digitalWrite(LED_BUILTIN, HIGH); ​
-  delay(1000);                      ​
-  digitalWrite(LED_BUILTIN, LOW);  ​
-  delay(1000);                      ​
-}​
+// Basic structure of an Arduino sketch
+void setup() {
+  // Initialization code runs once
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  // Main logic runs repeatedly
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+}
         </pre>
 
         <p>
@@ -513,9 +589,9 @@ void loop() {​
         </p>
 
         <pre>
-# This is a comment explaining the variable​
-name = "Alice" # Assigning a string to a variable​
-print("Hello, " + name)​
+# This is a comment explaining the variable
+name = "Alice" # Assigning a string to a variable
+print("Hello, " + name)
         </pre>
 
         <p>
@@ -686,10 +762,10 @@ print("Hello, " + name)​
           variable names :
         </p>
 
-        <p>●​ Local: Variables defined inside a function.</p>
-        <p>●​ Enclosing: Variables in the local scope of outer functions (for nested functions).</p>
-        <p>●​ Global: Variables defined at the top level of a script.</p>
-        <p>●​ Built-in: Pre-defined names like print and len.</p>
+        <p>● Local: Variables defined inside a function.</p>
+        <p>● Enclosing: Variables in the local scope of outer functions (for nested functions).</p>
+        <p>● Global: Variables defined at the top level of a script.</p>
+        <p>● Built-in: Pre-defined names like print and len.</p>
 
         <p>
           Beyond basic functions, Python supports Object-Oriented Programming (OOP), where code is
@@ -884,10 +960,10 @@ print("Hello, " + name)​
           can be applied to almost any element.
         </p>
 
-        <p>●​ id: A unique identifier used to target a specific element for styling or JavaScript interaction.</p>
-        <p>●​ class: A non-unique identifier used to group multiple elements for collective styling.</p>
-        <p>●​ style: Inline CSS to apply specific visual rules directly to an element.</p>
-        <p>●​ title: Extra information about an element, often displayed as a tooltip.</p>
+        <p>● id: A unique identifier used to target a specific element for styling or JavaScript interaction.</p>
+        <p>● class: A non-unique identifier used to group multiple elements for collective styling.</p>
+        <p>● style: Inline CSS to apply specific visual rules directly to an element.</p>
+        <p>● title: Extra information about an element, often displayed as a tooltip.</p>
       </div>
     </div>
 
@@ -918,13 +994,13 @@ print("Hello, " + name)​
         </p>
 
         <pre>
-// Traditional Function​
-function greet(name) {​
-    return "Hello, " + name;​
-}​
-​
-// Arrow Function​
-const greet = (name) => `Hello, ${name}`;​
+// Traditional Function
+function greet(name) {
+  return "Hello, " + name;
+}
+
+// Arrow Function
+const greet2 = (name) => `Hello, ${name}`;
         </pre>
       </div>
     </div>
@@ -946,23 +1022,23 @@ const greet = (name) => `Hello, ${name}`;​
           </tr>
           <tr>
             <td>Select by ID</td>
-            <td>document.getElementById('id').</td>
+            <td>document.getElementById('id')</td>
           </tr>
           <tr>
             <td>Select by Selector</td>
-            <td>document.querySelector('.class').</td>
+            <td>document.querySelector('.class')</td>
           </tr>
           <tr>
             <td>Create Element</td>
-            <td>document.createElement('div').</td>
+            <td>document.createElement('div')</td>
           </tr>
           <tr>
             <td>Add to Page</td>
-            <td>parentElement.appendChild(newElement).</td>
+            <td>parentElement.appendChild(newElement)</td>
           </tr>
           <tr>
             <td>Change Text</td>
-            <td>element.textContent = 'New Content'.</td>
+            <td>element.textContent = 'New Content'</td>
           </tr>
         </table>
 
@@ -1111,7 +1187,7 @@ const greet = (name) => `Hello, ${name}`;​
             <td>Obtain a working copy of an existing project.</td>
           </tr>
           <tr>
-            <td>git add.</td>
+            <td>git add .</td>
             <td>Stages changes.</td>
             <td>Prepare snapshots for commitment.</td>
           </tr>
@@ -1141,14 +1217,14 @@ const greet = (name) => `Hello, ${name}`;​
       <div class="card-details">
         <p>
           One of Git's most powerful features is branching, which allows a developer to create isolated
-          environments to work on new features or bug fixes without affecting the "main" deployable code.
+          environments to work on new features or bug fixes without affecting the deployable code.
         </p>
 
-        <p>●​ git branch: Lists existing branches or creates a new one.</p>
-        <p>●​ git checkout: Switches between branches.</p>
-        <p>●​ git merge: Integrates changes from one branch into another.</p>
-        <p>●​ git pull: Downloads changes from a remote repo and merges them into the current branch.</p>
-        <p>●​ git push: Uploads local commits to a remote repository like GitHub.</p>
+        <p>● git branch: Lists existing branches or creates a new one.</p>
+        <p>● git checkout: Switches between branches.</p>
+        <p>● git merge: Integrates changes from one branch into another.</p>
+        <p>● git pull: Downloads changes from a remote repo and merges them into the current branch.</p>
+        <p>● git push: Uploads local commits to a remote repository like GitHub.</p>
 
         <p>
           In a collaborative environment, developers often use the "Forking Workflow," where they create
@@ -1174,9 +1250,9 @@ const greet = (name) => `Hello, ${name}`;​
       <h3>Categorization of Programming Errors</h3>
       <div class="card-details">
         <p>Errors generally fall into three primary categories :</p>
-        <p>1.​ Syntax Errors: Violations of the language's grammar rules that prevent the code from running (e.g., a missing semicolon or an unclosed quote).</p>
-        <p>2.​ Runtime Errors: Crashes that occur while the program is executing (e.g., division by zero or calling a variable that doesn't exist).</p>
-        <p>3.​ Logic Errors: The program runs but produces incorrect or unintended results (e.g., a "buggy" function that adds numbers instead of subtracting them).</p>
+        <p>1. Syntax Errors: Violations of the language's grammar rules that prevent the code from running (e.g., a missing semicolon or an unclosed quote).</p>
+        <p>2. Runtime Errors: Crashes that occur while the program is executing (e.g., division by zero or calling a variable that doesn't exist).</p>
+        <p>3. Logic Errors: The program runs but produces incorrect or unintended results (e.g., a "buggy" function that adds numbers instead of subtracting them).</p>
       </div>
     </div>
 
@@ -1304,9 +1380,9 @@ const greet = (name) => `Hello, ${name}`;​
           microcontrollers execute code in a continuous loop.
         </p>
 
-        <p>●​ Hardware Setup: Identifying pins and connecting basic components like LEDs and buttons.</p>
-        <p>●​ The Sketch Architecture: Mastering the setup() and loop() functions.</p>
-        <p>●​ Real-World Application: Building a "Traffic Light Simulation" to practice timing and state management.</p>
+        <p>● Hardware Setup: Identifying pins and connecting basic components like LEDs and buttons.</p>
+        <p>● The Sketch Architecture: Mastering the setup() and loop() functions.</p>
+        <p>● Real-World Application: Building a "Traffic Light Simulation" to practice timing and state management.</p>
       </div>
     </div>
 
@@ -1319,9 +1395,9 @@ const greet = (name) => `Hello, ${name}`;​
           of a site, focusing on semantic tags and accessibility.
         </p>
 
-        <p>●​ Structuring Content: Using &lt;header&gt;, &lt;main&gt;, and &lt;section&gt; for logical layouts.</p>
-        <p>●​ Dynamic Behavior: Introducing JavaScript to handle events like button clicks and form submissions.</p>
-        <p>●​ DOM Scripting: Learning how to update a webpage's content without refreshing, using the Document Object Model.</p>
+        <p>● Structuring Content: Using &lt;header&gt;, &lt;main&gt;, and &lt;section&gt; for logical layouts.</p>
+        <p>● Dynamic Behavior: Introducing JavaScript to handle events like button clicks and form submissions.</p>
+        <p>● DOM Scripting: Learning how to update a webpage's content without refreshing, using the Document Object Model.</p>
       </div>
     </div>
 
@@ -1334,9 +1410,9 @@ const greet = (name) => `Hello, ${name}`;​
           data analysis or backend development.
         </p>
 
-        <p>●​ Complex Data Structures: Mastering lists, tuples, and dictionaries for data organization.</p>
-        <p>●​ Modular Design: Writing reusable functions and exploring Object-Oriented Programming (OOP).</p>
-        <p>●​ External Integration: Using pip to install libraries for web scraping or scientific computing.</p>
+        <p>● Complex Data Structures: Mastering lists, tuples, and dictionaries for data organization.</p>
+        <p>● Modular Design: Writing reusable functions and exploring Object-Oriented Programming (OOP).</p>
+        <p>● External Integration: Using pip to install libraries for web scraping or scientific computing.</p>
       </div>
     </div>
 
@@ -1348,9 +1424,9 @@ const greet = (name) => `Hello, ${name}`;​
           The final module equips learners with the tools used in professional software houses.
         </p>
 
-        <p>●​ Version Control: Learning Git commands and the GitHub workflow for collaboration.</p>
-        <p>●​ Debugging Masterclass: Applying systematic troubleshooting techniques like breakpoints and rubber ducking.</p>
-        <p>●​ Capstone Project: Building a "Smart IoT Dashboard" that uses an Arduino to read sensors, a Python script to process data, and an HTML/JavaScript interface to display results.</p>
+        <p>● Version Control: Learning Git commands and the GitHub workflow for collaboration.</p>
+        <p>● Debugging Masterclass: Applying systematic troubleshooting techniques like breakpoints and rubber ducking.</p>
+        <p>● Capstone Project: Building a "Smart IoT Dashboard" that uses an Arduino to read sensors, a Python script to process data, and an HTML/JavaScript interface to display results.</p>
       </div>
     </div>
 
@@ -1376,19 +1452,125 @@ const greet = (name) => `Hello, ${name}`;​
   </p>
 
 </section>
+<section id="runner" style="padding: 80px 10%;">
+  <h2 style="color:#38bdf8; text-align:center;">Interactive Code Runner</h2>
+
+  <p style="max-width:900px; margin: 15px auto; text-align:center; line-height:1.7; color:#cbd5e1;">
+    Edit the code below and click <strong>Run Code</strong>. Your output will appear instantly.
+  </p>
+
+  <div style="display:flex; flex-direction:column; gap:15px; margin-top:25px;">
+    
+    <textarea id="code" style="
+      width:100%;
+      height:260px;
+      background:#0b1220;
+      color:#e5e7eb;
+      padding:15px;
+      border-radius:12px;
+      border:1px solid #334155;
+      font-family:'Roboto Mono', monospace;
+      font-size:0.95rem;
+      outline:none;
+      resize: vertical;
+    "><!DOCTYPE html>
+<html>
+  <body>
+    <h1>Hello HDRbytes!</h1>
+    <p>Edit this code and click Run.</p>
+  </body>
+</html></textarea>
+
+    <div>
+      <button onclick="runCode()" style="
+        padding:12px 18px;
+        background:#38bdf8;
+        color:#020617;
+        border:none;
+        border-radius:12px;
+        font-weight:700;
+        cursor:pointer;
+      ">
+        Run Code
+      </button>
+
+      <button onclick="resetCode()" style="
+        padding:12px 18px;
+        margin-left:10px;
+        background:#020617;
+        color:#38bdf8;
+        border:1px solid #38bdf8;
+        border-radius:12px;
+        font-weight:700;
+        cursor:pointer;
+      ">
+        Reset
+      </button>
+    </div>
+
+    <iframe id="output" style="
+      width:100%;
+      height:320px;
+      border:2px solid #334155;
+      border-radius:12px;
+      background:#0b1220;
+    "></iframe>
+
+  </div>
+</section>
 <section id="about">
   <h2>About Us</h2>
+
   <p><strong>Website Name:</strong> HDRbytes</p>
   <p><strong>School:</strong> Alangilan Senior High School</p>
-  <p><strong>Academic Year:</strong> 2025–2026</p>
-  <p>HDRbytes was created to make coding and robotics education accessible and academic-focused.</p>
+  <p><strong>Academic Year:</strong> 2025-2026</p>
+  <p><strong>Email:</strong> harvey19allen@gmail.com</p>
+  <p><strong>Contact Number:</strong> 0936 049 0670</p>
+
+  <p>
+    HDRbytes was created to make coding and robotics education accessible, creative, and student-friendly.
+  </p>
 </section>
-
 <footer>
-  &copy; 2026 HDRbytes. All rights reserved.
+  <p>© 2026 <span style="color:#38bdf8;">HDRbytes</span></p>
 </footer>
-
 <script>
+const defaultCode = `<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Hello HDRbytes!</h1>
+    <p>Edit this code and click Run.</p>
+  </body>
+</html>`;
+
+function runCode() {
+  const code = document.getElementById("code").value;
+
+  const styledCode = `
+    <style>
+      body { 
+        background-color: #0f172a; 
+        color: #ffffff; 
+        font-family: Arial, sans-serif; 
+        padding: 15px;
+      }
+      h1, h2, h3, p, div, span, li, a { color: #ffffff; }
+      a { text-decoration: underline; }
+    </style>
+    ${code}
+  `;
+
+  document.getElementById("output").srcdoc = styledCode;
+}
+
+function resetCode() {
+  document.getElementById("code").value = defaultCode;
+  runCode();
+}
+
+/* Auto-run once */
+runCode();
+</script>
 <script>
 function toggleExclusive(selected) {
   document.querySelectorAll('.card').forEach(c => {
@@ -1397,58 +1579,6 @@ function toggleExclusive(selected) {
   selected.classList.toggle('active');
 }
 </script>
-<section id="code-runner" style="padding: 50px 10%; background: #020617; color: #e5e7eb;">
-  <h2 style="color: #38bdf8; text-align:center;">Interactive Code Runner</h2>
-
-  <div id="editor" style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
-    <textarea id="code" style="width:100%; height:250px; background:#0f172a; color:#e5e7eb; padding:10px; border-radius:8px; font-family:monospace;">
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>Hello HDRbytes!</h1>
-    <p>Edit this code and click Run.</p>
-  </body>
-</html>
-    </textarea>
-
-    <button onclick="runCode()" style="width:120px; padding:10px; background:#38bdf8; color:#020617; border:none; border-radius:5px; cursor:pointer;">
-      Run Code
-    </button>
-
-    <iframe id="output" style="width:100%; height:300px; margin-top:15px; border:2px solid #334155; border-radius:8px;"></iframe>
-  </div>
-</section>
-<script>
-function runCode() {
-  const code = document.getElementById('code').value;
-  const iframe = document.getElementById('output');
-  iframe.srcdoc = code;
-}
-// Initialize with default code
-runCode();
-</script>
-<script>
-function runCode() {
-  const code = document.getElementById('code').value;
-
-  // Wrap user code with a style tag to make text white
-  const styledCode = `
-    <style>
-      body { background-color: #0f172a; color: #ffffff; font-family: monospace; }
-      h1, h2, h3, p, div, span { color: #ffffff; }
-    </style>
-    ${code}
-  `;
-
-  const iframe = document.getElementById('output');
-  iframe.srcdoc = styledCode;
-}
-
-// Initialize with default code
-runCode();
-
-</script>
-
 
 </body>
 </html>
