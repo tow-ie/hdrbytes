@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HDRbytes | Coding & Robotics Learning Hub</title>
 
-  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
 
@@ -115,9 +114,22 @@
       opacity: 1;
     }
 
-    .card-details a {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    table th, table td {
+      border: 1px solid #1e293b;
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background: #020617;
       color: #38bdf8;
-      text-decoration: underline;
     }
 
     .code-runner textarea {
@@ -248,13 +260,7 @@
       <h3>Variables</h3>
       <p>Store values such as sensor data.</p>
       <div class="card-details">
-        <p>Conditional statements allow programs to choose actions.</p>
-        <p>Robots rely on conditions to respond to sensor input.</p>
-        <p>They form the basis of intelligent system behavior.</p>
-        <p>Conditions ensure safety and logical control.</p>
-        <!-- Reference Links -->
-        <p>🔗 <a href="https://www.geeksforgeeks.org/variables-programming/?utm_source=chatgpt.com" target="_blank">Variables – GeeksforGeeks</a></p>
-        <p>🔗 <a href="https://www.learn2code.io/topics/variables?utm_source=chatgpt.com" target="_blank">Variables – Learn2Code</a></p>
+        <p>Variables store data that can change while a program runs.</p>
       </div>
     </div>
 
@@ -262,13 +268,7 @@
       <h3>Conditions</h3>
       <p>Make decisions based on logic.</p>
       <div class="card-details">
-        <p>Conditional statements allow programs to choose actions.</p>
-        <p>Robots use conditions to respond to sensor input.</p>
-        <p>They form the basis of intelligent behavior.</p>
-        <p>Conditions improve safety and control.</p>
-        <!-- Reference Links -->
-        <p>🔗 <a href="https://www.geeksforgeeks.org/if-statement-in-programming/?utm_source=chatgpt.com" target="_blank">If Statements – GeeksforGeeks</a></p>
-        <p>🔗 <a href="https://codeofcode.org/lessons/control-structures-if-else-for-and-while-loops/?utm_source=chatgpt.com" target="_blank">Control Structures – CodeOfCode</a></p>
+        <p>Conditions allow programs to choose actions based on input.</p>
       </div>
     </div>
 
@@ -277,12 +277,6 @@
       <p>Repeat instructions efficiently.</p>
       <div class="card-details">
         <p>Loops execute code repeatedly.</p>
-        <p>They control continuous robot movement and monitoring.</p>
-        <p>Loops reduce code repetition.</p>
-        <p>They are essential for automation processes.</p>
-        <!-- Reference Links -->
-        <p>🔗 <a href="https://www.geeksforgeeks.org/dsa/loops-programming/?utm_source=chatgpt.com" target="_blank">Loops – GeeksforGeeks</a></p>
-        <p>🔗 <a href="https://www.tutorialspoint.com/computer_programming/computer_programming_loops.htm?utm_source=chatgpt.com" target="_blank">Loops – Tutorialspoint</a></p>
       </div>
     </div>
 
@@ -291,16 +285,78 @@
       <p>Organize and reuse code.</p>
       <div class="card-details">
         <p>Functions group instructions into reusable units.</p>
-        <p>They simplify complex robotic behavior.</p>
-        <p>Functions improve readability and maintenance.</p>
-        <p>They support modular system design.</p>
-        <!-- Reference Links -->
-        <p>🔗 <a href="https://www.w3schools.com/programming/prog_functions.php?utm_source=chatgpt.com" target="_blank">Functions – W3Schools</a></p>
-        <p>🔗 <a href="https://www.programiz.com/python-programming/function?utm_source=chatgpt.com" target="_blank">Functions – Programiz</a></p>
       </div>
     </div>
 
   </div>
+</section>
+
+<!-- ================== ADDED CONTENT FROM PDF ================== -->
+<section id="foundations">
+  <h2>Foundational Logic & Computational Thinking</h2>
+
+  <div class="card active">
+    <i class="fas fa-book"></i>
+    <h3>Theoretical Foundations of Computational Logic (main)</h3>
+    <div class="card-details" style="max-height:1000px;opacity:1;">
+      <p>
+        Programming is fundamentally based on logic rather than syntax.
+        These principles govern how instructions are designed, executed,
+        and evaluated across all programming languages.
+      </p>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleExclusive(this)">
+    <i class="fas fa-diagram-project"></i>
+    <h3>Algorithms (sub)</h3>
+    <p>Blueprints of problem-solving logic.</p>
+    <div class="card-details">
+      <table>
+        <tr><th>Concept</th><th>Description</th></tr>
+        <tr><td>Algorithm</td><td>Step-by-step solution</td></tr>
+        <tr><td>Flowchart</td><td>Visual logic map</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleExclusive(this)">
+    <i class="fas fa-database"></i>
+    <h3>Variables & Data Types (sub)</h3>
+    <div class="card-details">
+      <table>
+        <tr><th>Type</th><th>Example</th></tr>
+        <tr><td>Integer</td><td>10</td></tr>
+        <tr><td>String</td><td>"Hello"</td></tr>
+        <tr><td>Boolean</td><td>true / false</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card active">
+    <i class="fas fa-microchip"></i>
+    <h3>Data Representation & Binary Systems (main)</h3>
+    <div class="card-details" style="max-height:1000px;opacity:1;">
+      <p>
+        All programs are ultimately translated into binary data,
+        which consists of zeros and ones.
+      </p>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleExclusive(this)">
+    <i class="fas fa-circle-nodes"></i>
+    <h3>Bits, Bytes, and Encoding (sub)</h3>
+    <div class="card-details">
+      <table>
+        <tr><th>Unit</th><th>Description</th></tr>
+        <tr><td>Bit</td><td>0 or 1</td></tr>
+        <tr><td>Byte</td><td>8 bits</td></tr>
+        <tr><td>ASCII</td><td>Character encoding</td></tr>
+      </table>
+    </div>
+  </div>
+
 </section>
 
 <section id="runner" class="code-runner">
